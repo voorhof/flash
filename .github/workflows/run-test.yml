@@ -68,7 +68,7 @@ jobs:
 
       - name: Execute tests
         working-directory: laravel-app
-        run: 'vendor/bin/pest'
+        run: 'php artisan test'
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: ":memory:"
