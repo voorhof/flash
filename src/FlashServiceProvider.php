@@ -39,5 +39,4 @@ class FlashServiceProvider extends ServiceProvider
         // Load views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'flash');
     }
-
 }
