@@ -8,16 +8,34 @@ use Voorhof\Flash\FlashServiceProvider;
 
 class FlashTest extends TestCase
 {
-    protected function getPackageProviders($app)
+    protected function getPackageProviders($app): array
     {
         return [FlashServiceProvider::class];
     }
 
-    protected function getPackageAliases($app)
+    protected function getPackageAliases($app): array
     {
         return [
             'Flash' => Flash::class,
         ];
+    }
+
+    /** @test */
+    public function it_can_flash_a_primary_message()
+    {
+        Flash::primary('Test primary message');
+
+        $this->assertEquals('Test primary message', session('flash_message'));
+        $this->assertEquals('primary', session('flash_level'));
+    }
+
+    /** @test */
+    public function it_can_flash_a_secondary_message()
+    {
+        Flash::secondary('Test secondary message');
+
+        $this->assertEquals('Test secondary message', session('flash_message'));
+        $this->assertEquals('secondary', session('flash_level'));
     }
 
     /** @test */
@@ -54,5 +72,23 @@ class FlashTest extends TestCase
 
         $this->assertEquals('Test info message', session('flash_message'));
         $this->assertEquals('info', session('flash_level'));
+    }
+
+    /** @test */
+    public function it_can_flash_a_light_message()
+    {
+        Flash::light('Test light message');
+
+        $this->assertEquals('Test light message', session('flash_message'));
+        $this->assertEquals('light', session('flash_level'));
+    }
+
+    /** @test */
+    public function it_can_flash_a_dark_message()
+    {
+        Flash::dark('Test dark message');
+
+        $this->assertEquals('Test dark message', session('flash_message'));
+        $this->assertEquals('dark', session('flash_level'));
     }
 }

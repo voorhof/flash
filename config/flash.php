@@ -30,12 +30,18 @@ return [
     |--------------------------------------------------------------------------
     |
     | These are the available flash message levels.
+    | Based on the Bootstrap alert variants
+    | https://getbootstrap.com/docs/5.3/components/alerts/
     |
     */
     'levels' => [
+        'primary' => 'primary',
+        'secondary' => 'secondary',
         'success' => 'success',
         'warning' => 'warning',
         'danger' => 'danger',
         'info' => 'info',
+        'light' => 'light',
+        'dark' => 'dark',
     ],
 ];

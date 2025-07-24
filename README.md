@@ -4,7 +4,8 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/voorhof/flash/fix-php-code-style-issues.yml?branch=master&label=code%20style&style=flat-square)](https://github.com/voorhof/flash/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/voorhof/flash.svg?style=flat-square)](https://packagist.org/packages/voorhof/flash)
 
-A simple, elegant flash messaging package for Laravel applications.
+A simple, elegant flash messaging package for Laravel applications,
+using [Bootstrap alerts](https://getbootstrap.com/docs/5.3/components/alerts/) as the view.
 
 ## Installation
 
