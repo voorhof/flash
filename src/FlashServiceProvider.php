@@ -3,10 +3,9 @@
 namespace Voorhof\Flash;
 
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class FlashServiceProvider extends ServiceProvider implements DeferrableProvider
+class FlashServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -41,13 +40,4 @@ class FlashServiceProvider extends ServiceProvider implements DeferrableProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'flash');
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array<int, string>
-     */
-    public function provides(): array
-    {
-        return [FlashService::class];
-    }
 }
