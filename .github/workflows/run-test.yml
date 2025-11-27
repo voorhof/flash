@@ -57,7 +57,7 @@ jobs:
           composer config repositories.flash '{"type": "path", "url": "../flash"}' --file composer.json
 
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: 'flash'
 
