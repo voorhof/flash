@@ -2,6 +2,10 @@
 
 All notable release changes to `Voorhof Flash` will be documented in this file.
 
+## v1.0.3 - 2026-02-10
+
+Set minimum PHP version to 8.3
+
 ## v1.0.2 - 2025-07-28
 
 ### What's Changed
